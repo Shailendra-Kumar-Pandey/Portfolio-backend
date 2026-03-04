@@ -11,5 +11,9 @@ app.use(cors())
 // Router
 app.use('/email', mailRouter);
 
+app.get("/", (req, res) => {
+  res.send("Server Running 🚀");
+});
+
 
 export default app;
