@@ -4,7 +4,9 @@ import process from 'process'
 const emailRecever = async (subject, text)=>{
 
   let transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: "smtp.gmail.com", // or your provider
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
     user: process.env.emailUser,
     pass: process.env.pass,
